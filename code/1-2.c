@@ -1,17 +1,19 @@
 #include <stdio.h>
 
-int power(int base, int exp){
-    if(exp == 0){
-        return 1;
-    }
-    exp--;
-    return base * power(base, exp);
+void print() {
+    printf("Welcome to Computer Programming 03 Lab!\n");
+}
+
+int square(int n){
+    return n * n;
 }
 
 int main() {
-    printf("%d\n", power(2, 3));
-    printf("%d\n", power(5, 0));
-    printf("%d\n", power(3, 4));
+    print();
+
+    int num = 5;
+    int result = square(num);
+    printf("%d %d\n", num, result);
 
     return 0;
 }
