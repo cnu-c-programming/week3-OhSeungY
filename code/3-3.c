@@ -9,6 +9,7 @@ int average(int count, ...){
         average += va_arg(ap, int);
     }
     average /= count;
+    va_end(ap);
     return average;
 }
 
