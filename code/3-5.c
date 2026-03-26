@@ -6,7 +6,11 @@ void my_sum(char c, int count, ...){
     va_start(ap, count);
     if(c == 'S'){
         for(int i=0; i<count; i++){
-            printf("%s ", va_arg(ap, char*));
+            if(i == count - 1){
+                printf("%s", va_arg(ap, char*));
+            } else {
+                printf("%s ", va_arg(ap, char*));
+            }
         }
         printf("\n");
     }else if(c == 'C'){
